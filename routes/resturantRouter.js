@@ -2,7 +2,7 @@ const express = require('express');
 const resRoute= express.Router()
 const {ResturantModel}= require("../model/resturantModel")
 
-resRoute.post("/upload/restaurant",async(req,res)=>{
+resRoute.post("/restaurants",async(req,res)=>{
 const {name,address,menu}  = req.body
 try{
 	const resturant= new ResturantModel({name,address,menu})
